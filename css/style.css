@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 *,
 *::before,
 *::after{
@@ -7,7 +9,7 @@
 html,
 body{
     font-size: 62.5%;
-    font-family: "Roboto",sans-serif;
+    font-family:'Roboto', sans-serif;;
     font-weight: normal;
     background: #17161b;
     color: #ffffff;
@@ -64,9 +66,9 @@ input{
     display: grid;
     gap: 8rem 0;
     grid-template-areas: 
-    "my-header my-header"
-    "my-aside my-main"
-    "my-aside my-main"
+    "my-header my-header my-header"
+    "my-aside my-main my-main"
+    "my-aside my-main my-main"
     ;
     grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
 }
@@ -83,9 +85,13 @@ input{
 .header_logo{
     font-size: 6.4rem;
     margin-right: 7rem;
+    font-weight: 700;
+    line-height: 117%;
 }
 .header_nav a{
     font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 117%;
 }
 .header_nav a:not(:last-child){
     margin-right: 2.5rem;
@@ -112,11 +118,14 @@ input{
     padding-right: 4rem;
     background-size: 2rem;
     font-size: 2rem;
+    font-weight: 400;
+    line-height: 23px;
     color: #ffffff;
 }
 .header_find>input::placeholder{
     font-size: 2rem;
     color: #ffffff;
+
 }
 .header_date{
     text-align: center;
@@ -124,9 +133,11 @@ input{
 }
 .header_hour{
     font-size: 2rem;
+    line-height: 23px;
 }
 .header_days{
     font-size: 1.2rem;
+    line-height: 23px;
 }
 .header_personal{
     width: 6rem;
@@ -134,15 +145,216 @@ input{
     border-radius: 50%;
 }
 
+.main-display_trailer{
+    background: url(../img/backTrailer.jpg);
+    width:98.5%;
+    height: 20.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.9rem;
+    padding-left:1.9rem;
+    position: relative;
+    padding-bottom: 1.9rem;
+}
+
+.main-display_views{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+    
+}
+.main-display_header{
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 150%;
+}
+.main-display_date{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+.button-play_wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.3);
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_play{
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid rgba(255, 255, 255, 0.07);
+    border-left: 2.5rem solid white;
+    border-bottom: 1.5rem solid rgba(255, 255, 255, 0.07);
+    border-radius: 2px;
+}
 
 
+.title{
+    padding:3.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+.title_left,.title_right{
+    display: flex;
+    align-items: center;
+}
+.title_main{
+    font-size: 2rem;
+    line-height: 115%;
+}
+.title_count{
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    padding-top: 0.2rem;
+}
+.title_left{
+    font-size: 2rem;
+    line-height: 115%;
+}
+.title_right>span{
+    font-size: 1.4rem;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.2);
+}
+.title_right>img{
+    width: 2rem;
+    height: 1.6rem;
+    margin-left: 0.8rem;
+}
 
 
+.trending_item{
+    background-image: url(../img/trendingItem.jpg);
+    width: 47%;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+    height: 251px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.trending , .popular{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.6rem;
+}
 
+.trending_header{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+}
+.trending_date{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+.trending_footer,.popular_footer{
+    width: 100%;
+    align-items: center;
+    padding: 1.8rem 1rem 1.8rem 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+.popular_footer{
+    background: rgba(255, 255, 255, 0.4);
+    padding: .8rem 1.9rem .8rem 6.4rem;
+}
+.trending_time{
+    padding: .4rem 1.3rem;
+    background: #ffffff;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: black;
+}
+.trending_plash{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: .4rem 1.3rem;
+}
+.small{
+    width: 50px;
+    height: 50px;
+    left: 7%;
 
-
-
-
+}
+.button-play_wrap .small .button_play{
+    width: 0;
+    height: 0;
+    border-top: 1rem solid rgba(255, 255, 255, 0.07);
+    border-left: 1.5rem solid white;
+    border-bottom: 1rem solid rgba(255, 255, 255, 0.07);
+    border-radius: 2px;
+}
+.popular_item{
+    background-image: url(../img/popularBack.jpg);
+    width: 30%;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+    height: 192px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+.small-plus{
+    width: 3rem;
+    height: 3rem;
+    left: 10%;
+}
+.button-play_wrap .small-plus .button_play{
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid rgba(255, 255, 255, 0.07);
+    border-left: 0.1rem solid white;
+    border-bottom: 0.5rem solid rgba(255, 255, 255, 0.07);
+    border-radius: 2px;
+}
+.popular_header{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+.popular_date{
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 9px;
+}
+.popular_rating{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 120%;
+}
 
 
 
